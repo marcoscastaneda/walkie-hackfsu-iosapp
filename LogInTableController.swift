@@ -29,6 +29,11 @@ class LogInTableController: UITableViewController {
         self.textFieldEmailAddress.becomeFirstResponder()
     }
     
+    
+    @IBAction func logInTouched(sender: AnyObject) {
+        self.navigationController!.presentViewController(self.storyboard!.instantiateViewControllerWithIdentifier("LoggedInRoot") as! UITabBarController, animated: true, completion: nil)
+    }
+    
     @IBAction func closeAction(sender: AnyObject) {
         self.view.endEditing(true)
         

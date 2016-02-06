@@ -30,6 +30,13 @@ class SignUpFinishTableController: UITableViewController {
             self.labelHelloName.text = "Hi \(firstName)!"
         }
     }
+    
+    @IBAction func completeSignUpTouched(sender: AnyObject) {
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

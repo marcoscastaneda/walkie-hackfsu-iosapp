@@ -17,8 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         // Nav bar appearance
-        UINavigationBar.appearance().barStyle = UIBarStyle.Black
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont(name: "SinkinSans-500Medium", size: 14)!
+            , NSForegroundColorAttributeName : UIColor.whiteColor()]
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 52/255, green: 73/255, blue: 94/255, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor(white: 0.9, alpha: 1)
+        UINavigationBar.appearance().translucent = false
+        
+        // Tab bar apperance
+        UITabBar.appearance().barTintColor = UIColor(white: 0, alpha: 1)
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        UITabBar.appearance().translucent = true
         
         // Table appearance
         UITableView.appearance().separatorColor = UIColor(white: 0.2, alpha: 1)

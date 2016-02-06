@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD18FB851C6685DA004AFA47 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18FB841C6685DA004AFA47 /* MapViewController.swift */; };
+		BD18FB891C668A18004AFA47 /* tab_inactive_walking.png in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB871C668A18004AFA47 /* tab_inactive_walking.png */; };
+		BD18FB8A1C668A18004AFA47 /* tab_inactive_walking@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB881C668A18004AFA47 /* tab_inactive_walking@2x.png */; };
+		BD18FB8F1C668AAA004AFA47 /* tab_active_walking@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB8D1C668AAA004AFA47 /* tab_active_walking@2x.png */; };
+		BD18FB901C668AAA004AFA47 /* tab_active_walking.png in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB8E1C668AAA004AFA47 /* tab_active_walking.png */; };
+		BD18FB951C668CA0004AFA47 /* tab_inactive_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB911C668CA0004AFA47 /* tab_inactive_settings.png */; };
+		BD18FB961C668CA0004AFA47 /* tab_active_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB921C668CA0004AFA47 /* tab_active_settings.png */; };
+		BD18FB971C668CA0004AFA47 /* tab_active_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB931C668CA0004AFA47 /* tab_active_settings@2x.png */; };
+		BD18FB981C668CA0004AFA47 /* tab_inactive_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB941C668CA0004AFA47 /* tab_inactive_settings@2x.png */; };
+		BD18FB9B1C66905C004AFA47 /* SinkinSans-400Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB991C66905C004AFA47 /* SinkinSans-400Regular.otf */; };
+		BD18FB9C1C66905C004AFA47 /* SinkinSans-500Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB9A1C66905C004AFA47 /* SinkinSans-500Medium.otf */; };
 		BD9A7D911C66679300B9CBDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7D901C66679300B9CBDF /* AppDelegate.swift */; };
 		BD9A7D961C66679300B9CBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9A7D941C66679300B9CBDF /* Main.storyboard */; };
 		BD9A7D981C66679300B9CBDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9A7D971C66679300B9CBDF /* Assets.xcassets */; };
@@ -38,6 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD18FB841C6685DA004AFA47 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BD18FB871C668A18004AFA47 /* tab_inactive_walking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_inactive_walking.png; sourceTree = "<group>"; };
+		BD18FB881C668A18004AFA47 /* tab_inactive_walking@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_inactive_walking@2x.png"; sourceTree = "<group>"; };
+		BD18FB8D1C668AAA004AFA47 /* tab_active_walking@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_active_walking@2x.png"; sourceTree = "<group>"; };
+		BD18FB8E1C668AAA004AFA47 /* tab_active_walking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_active_walking.png; sourceTree = "<group>"; };
+		BD18FB911C668CA0004AFA47 /* tab_inactive_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_inactive_settings.png; sourceTree = "<group>"; };
+		BD18FB921C668CA0004AFA47 /* tab_active_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_active_settings.png; sourceTree = "<group>"; };
+		BD18FB931C668CA0004AFA47 /* tab_active_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_active_settings@2x.png"; sourceTree = "<group>"; };
+		BD18FB941C668CA0004AFA47 /* tab_inactive_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_inactive_settings@2x.png"; sourceTree = "<group>"; };
+		BD18FB991C66905C004AFA47 /* SinkinSans-400Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SinkinSans-400Regular.otf"; sourceTree = "<group>"; };
+		BD18FB9A1C66905C004AFA47 /* SinkinSans-500Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SinkinSans-500Medium.otf"; sourceTree = "<group>"; };
 		BD9A7D8D1C66679300B9CBDF /* Walk Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Walk Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9A7D901C66679300B9CBDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9A7D951C66679300B9CBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +104,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD18FB861C6685DD004AFA47 /* Logged In */ = {
+			isa = PBXGroup;
+			children = (
+				BD18FB841C6685DA004AFA47 /* MapViewController.swift */,
+			);
+			name = "Logged In";
+			sourceTree = "<group>";
+		};
+		BD18FB8B1C668A1B004AFA47 /* Tab Bar Icons */ = {
+			isa = PBXGroup;
+			children = (
+				BD18FB8D1C668AAA004AFA47 /* tab_active_walking@2x.png */,
+				BD18FB8E1C668AAA004AFA47 /* tab_active_walking.png */,
+				BD18FB871C668A18004AFA47 /* tab_inactive_walking.png */,
+				BD18FB881C668A18004AFA47 /* tab_inactive_walking@2x.png */,
+				BD18FB911C668CA0004AFA47 /* tab_inactive_settings.png */,
+				BD18FB921C668CA0004AFA47 /* tab_active_settings.png */,
+				BD18FB931C668CA0004AFA47 /* tab_active_settings@2x.png */,
+				BD18FB941C668CA0004AFA47 /* tab_inactive_settings@2x.png */,
+			);
+			name = "Tab Bar Icons";
+			sourceTree = "<group>";
+		};
+		BD18FB8C1C668A1E004AFA47 /* UI Icons */ = {
+			isa = PBXGroup;
+			children = (
+				BD18FB8B1C668A1B004AFA47 /* Tab Bar Icons */,
+			);
+			name = "UI Icons";
+			sourceTree = "<group>";
+		};
+		BD18FB9D1C66905F004AFA47 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BD18FB991C66905C004AFA47 /* SinkinSans-400Regular.otf */,
+				BD18FB9A1C66905C004AFA47 /* SinkinSans-500Medium.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		BD9A7D841C66679300B9CBDF = {
 			isa = PBXGroup;
 			children = (
@@ -105,9 +167,9 @@
 		BD9A7D8F1C66679300B9CBDF /* Walk Safe */ = {
 			isa = PBXGroup;
 			children = (
+				BD9A7D941C66679300B9CBDF /* Main.storyboard */,
 				BD9A7D901C66679300B9CBDF /* AppDelegate.swift */,
 				BD9A7DCC1C66803200B9CBDF /* Controllers */,
-				BD9A7D941C66679300B9CBDF /* Main.storyboard */,
 				BD9A7DC01C666AD000B9CBDF /* Supporting Files */,
 			);
 			path = "Walk Safe";
@@ -134,6 +196,8 @@
 		BD9A7DC01C666AD000B9CBDF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BD18FB9D1C66905F004AFA47 /* Fonts */,
+				BD18FB8C1C668A1E004AFA47 /* UI Icons */,
 				BD9A7D971C66679300B9CBDF /* Assets.xcassets */,
 				BD9A7D991C66679300B9CBDF /* LaunchScreen.storyboard */,
 				BD9A7D9C1C66679300B9CBDF /* Info.plist */,
@@ -156,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				BD9A7DCD1C66804600B9CBDF /* RootViewController.swift */,
+				BD18FB861C6685DD004AFA47 /* Logged In */,
 				BD9A7DCB1C66802900B9CBDF /* Pre-Authentication */,
 			);
 			name = Controllers;
@@ -265,10 +330,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD18FB8F1C668AAA004AFA47 /* tab_active_walking@2x.png in Resources */,
+				BD18FB9B1C66905C004AFA47 /* SinkinSans-400Regular.otf in Resources */,
 				BD9A7D9B1C66679300B9CBDF /* LaunchScreen.storyboard in Resources */,
+				BD18FB981C668CA0004AFA47 /* tab_inactive_settings@2x.png in Resources */,
 				BD9A7DC21C666B9B00B9CBDF /* image_hero_walking.jpg in Resources */,
+				BD18FB971C668CA0004AFA47 /* tab_active_settings@2x.png in Resources */,
 				BD9A7D981C66679300B9CBDF /* Assets.xcassets in Resources */,
+				BD18FB9C1C66905C004AFA47 /* SinkinSans-500Medium.otf in Resources */,
+				BD18FB951C668CA0004AFA47 /* tab_inactive_settings.png in Resources */,
+				BD18FB8A1C668A18004AFA47 /* tab_inactive_walking@2x.png in Resources */,
+				BD18FB891C668A18004AFA47 /* tab_inactive_walking.png in Resources */,
 				BD9A7D961C66679300B9CBDF /* Main.storyboard in Resources */,
+				BD18FB961C668CA0004AFA47 /* tab_active_settings.png in Resources */,
+				BD18FB901C668AAA004AFA47 /* tab_active_walking.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9A7DCA1C66802600B9CBDF /* SignUpFinishTableController.swift in Sources */,
+				BD18FB851C6685DA004AFA47 /* MapViewController.swift in Sources */,
 				BD9A7DC81C667F3800B9CBDF /* SignUpTableController.swift in Sources */,
 				BD9A7DCE1C66804600B9CBDF /* RootViewController.swift in Sources */,
 				BD9A7D911C66679300B9CBDF /* AppDelegate.swift in Sources */,
@@ -522,6 +598,7 @@
 				BD9A7DB71C66679300B9CBDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD9A7DB81C66679300B9CBDF /* Build configuration list for PBXNativeTarget "Walk SafeTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +607,7 @@
 				BD9A7DBA1C66679300B9CBDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD9A7DBB1C66679300B9CBDF /* Build configuration list for PBXNativeTarget "Walk SafeUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +616,7 @@
 				BD9A7DBD1C66679300B9CBDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -24,6 +24,10 @@ class SignUpTableController: UITableViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.textFieldUserFullName.becomeFirstResponder()
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         // Pass ride object information to detail table
