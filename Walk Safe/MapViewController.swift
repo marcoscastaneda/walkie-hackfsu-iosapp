@@ -9,12 +9,18 @@
 import UIKit
 import MapKit
 import CoreLocation
+import AddressBookUI
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
+    // INTIAL LOADUPS/UI BOOLEANS:
     let locationManager = CLLocationManager()
-    var hasLoaded = false
+    var hasLoaded = false // has initial view loaded?
+    var firstDestinationPicked = false  // prevent filling search bar w/ user location initially
     var destinationSelected = false
+    
+    // WALK/MONITORING-RELATED BOOLEANS:
+    var isWalking = false   // is user walking/monitoring on?
     
     @IBOutlet weak var buttonLoading: UIButton!
     @IBOutlet weak var mapView: MKMapView!
@@ -22,10 +28,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     var destinationName: String?
     var destinationPin = MKPointAnnotation()
+    var destinationPlacemark:CLPlacemark?   // hold address info
+    
+    
+    // Map overlays
+    var route:MKRoute?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.mapView.userTrackingMode = MKUserTrackingMode.None
         self.navigationItem.title = "WALKIE"
         
@@ -78,16 +89,61 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+    
+        // Walking users don't need to change any pins
+        if (isWalking)
+        {
+            return
+        }
         
         if (hasLoaded)
         {
-            self.navigationItem.rightBarButtonItem!.enabled = true
+            // Prevent user's first location from filling up the search bar, flag it as true after.
+            if (!firstDestinationPicked)
+            {
+                self.navigationItem.rightBarButtonItem?.enabled = false
+                firstDestinationPicked = true
+            }
             
+            // Grab new location the user dragged to
+            else {
+                
             self.destinationPin.coordinate = self.mapView.region.center
             self.mapView.addAnnotation(self.destinationPin)
+            
+            // Geocode address where the user dropped pin
+            CLGeocoder().reverseGeocodeLocation(CLLocation(latitude: self.mapView.region.center.latitude, longitude: self.mapView.region.center.longitude), completionHandler: { (placemarks: [CLPlacemark]?, error: NSError?) -> Void in
+                
+                if let firstPlacemark = placemarks?[0] {
+                    
+                    let addressDictionary = firstPlacemark.addressDictionary
+                    
+                    if addressDictionary != nil {
+                        
+                        self.navigationItem.rightBarButtonItem?.enabled = true
+                        
+                        self.destinationName = ABCreateStringWithAddressDictionary(firstPlacemark.addressDictionary!, true)
+                        self.searchBarDestination.text = self.destinationName
+                    }
+                    else
+                    {
+                        self.navigationItem.rightBarButtonItem?.enabled = false
+                        
+                        self.destinationName = "Error grabbing location name"
+                    }
+                }
+                
+                })
+                
+            }
         }
+//            CLGeocoder().reverseGeocodeLocation(CLLocation(latitude: newCoordinates.latitude, longitude: newCoordinates.longitude), completionHandler: {(placemarks, error) -> Void in
+//                if error != nil {
+//                    println("Reverse geocoder failed with error" + error.localizedDescription)
+//                    return
+//                }
+//        }
     }
-
     
     // Custom pins
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -114,5 +170,59 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//    MARK: - Start/stop walk action
+    
+    
+    @IBAction func startStopWalkAction(sender: AnyObject) {
+        // MARK: - End walk monitoring
+        if isWalking {
+            
+            let alert = UIAlertView(title: "End Walk?", message: "Are you sure you want to end your walking session?\n\nThis alert will close in 5 seconds.", delegate: nil, cancelButtonTitle: "Cancel", otherButtonTitles: "Yes, end this walk.")
+//            var alert: UIAlertView = UIAlertView(title: "End Walk", message: "Are you sure you want to end your walk? Monitoring will be ended.", delegate: nil, cancelButtonTitle: "Cancel");
+            alert.show()
+
+            
+            self.navigationItem.rightBarButtonItem?.title = "Start Walk"
+        }
+    
+        // MARK: - Start walk monitoring
+        // Show direction/route of walk
+        else {
+            self.navigationItem.rightBarButtonItem?.title = "End Walk"
+            
+            print(self.mapView.userLocation.location)
+            print(self.destinationPlacemark)
+            
+            if (self.mapView.userLocation.location != nil && self.destinationPlacemark != nil)
+            {
+                // Get directions and overlay onto map
+                let directionsRequest = MKDirectionsRequest()
+                let userLocation = self.mapView.userLocation.location
+                
+    
+                directionsRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation!.coordinate, addressDictionary: nil))
+                
+                directionsRequest.destination = MKMapItem(placemark: MKPlacemark(placemark: self.destinationPlacemark!))
+                directionsRequest.transportType = MKDirectionsTransportType.Walking
+                
+                let directions = MKDirections(request: directionsRequest)
+                directions.calculateDirectionsWithCompletionHandler { (response:MKDirectionsResponse?, error: NSError?) -> Void in
+                    if error == nil {
+                        self.route = response!.routes[0] as MKRoute
+                        self.mapView.addOverlay(self.route!.polyline)
+                        print(response)
+                    }
+                    else
+                    {
+                        print(error)
+                    }
+                }
+            }
+            
+            isWalking = true
+        }
+    }
+    
 
 }

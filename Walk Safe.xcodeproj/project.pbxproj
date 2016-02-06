@@ -21,6 +21,13 @@
 		BD4967A81C6692DD008B6D1C /* image_hero_walking2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD4967A71C6692DD008B6D1C /* image_hero_walking2.jpg */; };
 		BD4967AB1C669C72008B6D1C /* marker_green.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4967A91C669C72008B6D1C /* marker_green.png */; };
 		BD4967AC1C669C72008B6D1C /* marker_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4967AA1C669C72008B6D1C /* marker_green@2x.png */; };
+		BD4967AF1C66A81E008B6D1C /* SettingsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4967AE1C66A81E008B6D1C /* SettingsTableController.swift */; };
+		BD4967B11C66AC98008B6D1C /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4967B01C66AC98008B6D1C /* Firebase.framework */; };
+		BD4967B41C66ACB5008B6D1C /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4967B31C66ACB5008B6D1C /* libicucore.tbd */; };
+		BD4967B61C66ACBC008B6D1C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4967B51C66ACBC008B6D1C /* libc++.tbd */; };
+		BD4967B81C66ACC2008B6D1C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4967B71C66ACC2008B6D1C /* CFNetwork.framework */; };
+		BD4967BA1C66ACC7008B6D1C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4967B91C66ACC7008B6D1C /* Security.framework */; };
+		BD4967BC1C66ACCE008B6D1C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4967BB1C66ACCE008B6D1C /* SystemConfiguration.framework */; };
 		BD9A7D911C66679300B9CBDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7D901C66679300B9CBDF /* AppDelegate.swift */; };
 		BD9A7D961C66679300B9CBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9A7D941C66679300B9CBDF /* Main.storyboard */; };
 		BD9A7D981C66679300B9CBDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9A7D971C66679300B9CBDF /* Assets.xcassets */; };
@@ -66,6 +73,13 @@
 		BD4967A71C6692DD008B6D1C /* image_hero_walking2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_hero_walking2.jpg; sourceTree = "<group>"; };
 		BD4967A91C669C72008B6D1C /* marker_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_green.png; sourceTree = "<group>"; };
 		BD4967AA1C669C72008B6D1C /* marker_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker_green@2x.png"; sourceTree = "<group>"; };
+		BD4967AE1C66A81E008B6D1C /* SettingsTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableController.swift; sourceTree = "<group>"; };
+		BD4967B01C66AC98008B6D1C /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		BD4967B31C66ACB5008B6D1C /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		BD4967B51C66ACBC008B6D1C /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		BD4967B71C66ACC2008B6D1C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BD4967B91C66ACC7008B6D1C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BD4967BB1C66ACCE008B6D1C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BD9A7D8D1C66679300B9CBDF /* Walk Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Walk Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9A7D901C66679300B9CBDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9A7D951C66679300B9CBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +104,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD4967BC1C66ACCE008B6D1C /* SystemConfiguration.framework in Frameworks */,
+				BD4967BA1C66ACC7008B6D1C /* Security.framework in Frameworks */,
+				BD4967B81C66ACC2008B6D1C /* CFNetwork.framework in Frameworks */,
+				BD4967B61C66ACBC008B6D1C /* libc++.tbd in Frameworks */,
+				BD4967B41C66ACB5008B6D1C /* libicucore.tbd in Frameworks */,
+				BD4967B11C66AC98008B6D1C /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				BD18FB841C6685DA004AFA47 /* MapViewController.swift */,
+				BD4967AE1C66A81E008B6D1C /* SettingsTableController.swift */,
 			);
 			name = "Logged In";
 			sourceTree = "<group>";
@@ -160,6 +181,19 @@
 			name = "Annotation Pins";
 			sourceTree = "<group>";
 		};
+		BD4967B21C66AC9A008B6D1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD4967BB1C66ACCE008B6D1C /* SystemConfiguration.framework */,
+				BD4967B91C66ACC7008B6D1C /* Security.framework */,
+				BD4967B71C66ACC2008B6D1C /* CFNetwork.framework */,
+				BD4967B51C66ACBC008B6D1C /* libc++.tbd */,
+				BD4967B31C66ACB5008B6D1C /* libicucore.tbd */,
+				BD4967B01C66AC98008B6D1C /* Firebase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD9A7D841C66679300B9CBDF = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +220,7 @@
 				BD9A7D941C66679300B9CBDF /* Main.storyboard */,
 				BD9A7D901C66679300B9CBDF /* AppDelegate.swift */,
 				BD9A7DCC1C66803200B9CBDF /* Controllers */,
+				BD4967B21C66AC9A008B6D1C /* Frameworks */,
 				BD9A7DC01C666AD000B9CBDF /* Supporting Files */,
 			);
 			path = "Walk Safe";
@@ -389,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9A7DCA1C66802600B9CBDF /* SignUpFinishTableController.swift in Sources */,
+				BD4967AF1C66A81E008B6D1C /* SettingsTableController.swift in Sources */,
 				BD18FB851C6685DA004AFA47 /* MapViewController.swift in Sources */,
 				BD9A7DC81C667F3800B9CBDF /* SignUpTableController.swift in Sources */,
 				BD9A7DCE1C66804600B9CBDF /* RootViewController.swift in Sources */,
@@ -533,7 +569,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Walk",
+					Safe,
+				);
 				INFOPLIST_FILE = "Walk Safe/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mcastaneda.Walk-Safe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -544,7 +586,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Walk",
+					Safe,
+				);
 				INFOPLIST_FILE = "Walk Safe/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mcastaneda.Walk-Safe";
 				PRODUCT_NAME = "$(TARGET_NAME)";

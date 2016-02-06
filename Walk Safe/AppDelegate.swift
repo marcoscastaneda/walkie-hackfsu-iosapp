@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITableViewCell.appearance().separatorInset = UIEdgeInsetsZero
         
         // Bar button
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.systemFontOfSize(15)], forState: UIControlState.Normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont.systemFontOfSize(16)], forState: UIControlState.Normal)
         
         
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
