@@ -18,6 +18,9 @@
 		BD18FB981C668CA0004AFA47 /* tab_inactive_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB941C668CA0004AFA47 /* tab_inactive_settings@2x.png */; };
 		BD18FB9B1C66905C004AFA47 /* SinkinSans-400Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB991C66905C004AFA47 /* SinkinSans-400Regular.otf */; };
 		BD18FB9C1C66905C004AFA47 /* SinkinSans-500Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB9A1C66905C004AFA47 /* SinkinSans-500Medium.otf */; };
+		BD4967A81C6692DD008B6D1C /* image_hero_walking2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD4967A71C6692DD008B6D1C /* image_hero_walking2.jpg */; };
+		BD4967AB1C669C72008B6D1C /* marker_green.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4967A91C669C72008B6D1C /* marker_green.png */; };
+		BD4967AC1C669C72008B6D1C /* marker_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4967AA1C669C72008B6D1C /* marker_green@2x.png */; };
 		BD9A7D911C66679300B9CBDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7D901C66679300B9CBDF /* AppDelegate.swift */; };
 		BD9A7D961C66679300B9CBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9A7D941C66679300B9CBDF /* Main.storyboard */; };
 		BD9A7D981C66679300B9CBDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9A7D971C66679300B9CBDF /* Assets.xcassets */; };
@@ -60,6 +63,9 @@
 		BD18FB941C668CA0004AFA47 /* tab_inactive_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_inactive_settings@2x.png"; sourceTree = "<group>"; };
 		BD18FB991C66905C004AFA47 /* SinkinSans-400Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SinkinSans-400Regular.otf"; sourceTree = "<group>"; };
 		BD18FB9A1C66905C004AFA47 /* SinkinSans-500Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SinkinSans-500Medium.otf"; sourceTree = "<group>"; };
+		BD4967A71C6692DD008B6D1C /* image_hero_walking2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_hero_walking2.jpg; sourceTree = "<group>"; };
+		BD4967A91C669C72008B6D1C /* marker_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_green.png; sourceTree = "<group>"; };
+		BD4967AA1C669C72008B6D1C /* marker_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker_green@2x.png"; sourceTree = "<group>"; };
 		BD9A7D8D1C66679300B9CBDF /* Walk Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Walk Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9A7D901C66679300B9CBDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9A7D951C66679300B9CBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 		BD18FB8C1C668A1E004AFA47 /* UI Icons */ = {
 			isa = PBXGroup;
 			children = (
+				BD4967AD1C669C74008B6D1C /* Annotation Pins */,
 				BD18FB8B1C668A1B004AFA47 /* Tab Bar Icons */,
 			);
 			name = "UI Icons";
@@ -142,6 +149,15 @@
 				BD18FB9A1C66905C004AFA47 /* SinkinSans-500Medium.otf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		BD4967AD1C669C74008B6D1C /* Annotation Pins */ = {
+			isa = PBXGroup;
+			children = (
+				BD4967A91C669C72008B6D1C /* marker_green.png */,
+				BD4967AA1C669C72008B6D1C /* marker_green@2x.png */,
+			);
+			name = "Annotation Pins";
 			sourceTree = "<group>";
 		};
 		BD9A7D841C66679300B9CBDF = {
@@ -201,6 +217,7 @@
 				BD9A7D971C66679300B9CBDF /* Assets.xcassets */,
 				BD9A7D991C66679300B9CBDF /* LaunchScreen.storyboard */,
 				BD9A7D9C1C66679300B9CBDF /* Info.plist */,
+				BD4967A71C6692DD008B6D1C /* image_hero_walking2.jpg */,
 				BD9A7DC11C666B9B00B9CBDF /* image_hero_walking.jpg */,
 			);
 			name = "Supporting Files";
@@ -335,12 +352,15 @@
 				BD9A7D9B1C66679300B9CBDF /* LaunchScreen.storyboard in Resources */,
 				BD18FB981C668CA0004AFA47 /* tab_inactive_settings@2x.png in Resources */,
 				BD9A7DC21C666B9B00B9CBDF /* image_hero_walking.jpg in Resources */,
+				BD4967AB1C669C72008B6D1C /* marker_green.png in Resources */,
 				BD18FB971C668CA0004AFA47 /* tab_active_settings@2x.png in Resources */,
 				BD9A7D981C66679300B9CBDF /* Assets.xcassets in Resources */,
 				BD18FB9C1C66905C004AFA47 /* SinkinSans-500Medium.otf in Resources */,
 				BD18FB951C668CA0004AFA47 /* tab_inactive_settings.png in Resources */,
 				BD18FB8A1C668A18004AFA47 /* tab_inactive_walking@2x.png in Resources */,
+				BD4967A81C6692DD008B6D1C /* image_hero_walking2.jpg in Resources */,
 				BD18FB891C668A18004AFA47 /* tab_inactive_walking.png in Resources */,
+				BD4967AC1C669C72008B6D1C /* marker_green@2x.png in Resources */,
 				BD9A7D961C66679300B9CBDF /* Main.storyboard in Resources */,
 				BD18FB961C668CA0004AFA47 /* tab_active_settings.png in Resources */,
 				BD18FB901C668AAA004AFA47 /* tab_active_walking.png in Resources */,

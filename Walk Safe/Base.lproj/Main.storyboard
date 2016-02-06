@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SinkinSans-500Medium.otf">
+            <string>SinkinSans-500Medium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -17,15 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_hero_walking.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vcW-9N-jWW">
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_hero_walking2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vcW-9N-jWW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="walkie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXC-Xp-Q0A">
-                                <rect key="frame" x="108" y="163" width="158" height="66"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg1-dh-GZf">
                                 <rect key="frame" x="20" y="564" width="335" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,6 +57,12 @@
                                     <segue destination="kv9-pd-odu" kind="show" id="tdJ-RB-ZWd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WALKIE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXC-Xp-Q0A">
+                                <rect key="frame" x="81" y="179" width="212" height="45"/>
+                                <fontDescription key="fontDescription" name="SinkinSans-500Medium" family="Sinkin Sans" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -440,10 +445,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zuu-Ox-531">
-                                <rect key="frame" x="74" y="248" width="226" height="58"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="Tap to Start Walk">
+                                <rect key="frame" x="20" y="222" width="335" height="110"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <state key="normal" title="Finding your location...">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -451,10 +455,14 @@
                                         <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startWalkTouched:" destination="fTH-mr-xku" eventType="touchUpInside" id="IMc-1T-GIl"/>
-                                </connections>
                             </button>
+                            <searchBar contentMode="redraw" fixedFrame="YES" barStyle="black" placeholder="Drag map or enter your destination" translatesAutoresizingMaskIntoConstraints="NO" id="9pO-zz-c7M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="alphabet" keyboardAppearance="alert" returnKeyType="route"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -466,12 +474,13 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="FlW-HQ-niE">
-                        <barButtonItem key="leftBarButtonItem" title="FSU" id="q7c-KR-eUh"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Wv1-Ak-VvE"/>
+                        <barButtonItem key="leftBarButtonItem" id="q7c-KR-eUh"/>
+                        <barButtonItem key="rightBarButtonItem" id="Wv1-Ak-VvE"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonLoading" destination="Zuu-Ox-531" id="KGy-ma-A3c"/>
                         <outlet property="mapView" destination="tRx-9i-yDu" id="P9d-x4-0er"/>
-                        <outlet property="startWalkButton" destination="Zuu-Ox-531" id="unB-Ua-mZD"/>
+                        <outlet property="searchBarDestination" destination="9pO-zz-c7M" id="a36-Te-Txf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2x-40-YqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -571,7 +580,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image_hero_walking.jpg" width="909" height="1050"/>
+        <image name="image_hero_walking2.jpg" width="983" height="1300"/>
         <image name="tab_active_settings.png" width="28" height="28"/>
         <image name="tab_active_walking.png" width="28" height="28"/>
         <image name="tab_inactive_settings.png" width="28" height="28"/>
