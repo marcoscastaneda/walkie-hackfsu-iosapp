@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BD9A7D8C1C66679300B9CBDF"
-               BuildableName = "Walk Safe.app"
+               BuildableName = "walkie.app"
                BlueprintName = "Walk Safe"
                ReferencedContainer = "container:Walk Safe.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BD9A7D8C1C66679300B9CBDF"
-            BuildableName = "Walk Safe.app"
+            BuildableName = "walkie.app"
             BlueprintName = "Walk Safe"
             ReferencedContainer = "container:Walk Safe.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BD9A7D8C1C66679300B9CBDF"
-            BuildableName = "Walk Safe.app"
+            BuildableName = "walkie.app"
             BlueprintName = "Walk Safe"
             ReferencedContainer = "container:Walk Safe.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BD9A7D8C1C66679300B9CBDF"
-            BuildableName = "Walk Safe.app"
+            BuildableName = "walkie.app"
             BlueprintName = "Walk Safe"
             ReferencedContainer = "container:Walk Safe.xcodeproj">
          </BuildableReference>

@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 import AddressBookUI
+import Firebase
+import Parse
 
 class MapPin : NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
@@ -24,6 +26,11 @@ class MapPin : NSObject, MKAnnotation {
 }
 
 class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegate, CLLocationManagerDelegate, UIActionSheetDelegate {
+    
+    // Firebase ref
+    let ref = Firebase(url: "https://walkieapp.firebaseio.com/geolocation")
+    
+    let currentUser = PFUser.currentUser()
     
     // INTIAL LOADUPS/UI BOOLEANS:
     let locationManager = CLLocationManager()
@@ -217,7 +224,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
         // MARK: - End walk monitoring
         if isWalking {
             
-            let alert = UIAlertView(title: "End Walk?", message: "Are you sure you want to end your walking session?\n\nThis alert will close in 5 seconds.", delegate: nil, cancelButtonTitle: "Cancel", otherButtonTitles: "Yes, end this walk.")
+            let alert = UIAlertView(title: "End Walk?", message: "Are you sure you want to end your walking session?", delegate: nil, cancelButtonTitle: "Cancel", otherButtonTitles: "Yes, end this walk.")
             alert.tag = 0
             alert.delegate = self
             alert.show()
@@ -228,7 +235,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
         // MARK: - Start walk monitoring
         // Show direction/route of walk
         else {
+            
             isWalking = true
+            
+            Firebase.goOnline()
             
             self.searchBarDestination.userInteractionEnabled = false // disable changing of address while in walk
             
@@ -265,9 +275,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent!) {
         if(event.subtype == UIEventSubtype.MotionShake) {
             
+            if isWalking {
+                
             if (self.defaultAlertPreferences.boolForKey("shakeAlert") == true)
             {
+                callNumber(self.defaultAlertPreferences.valueForKey("emergencyContact") as! String)
+            } else {
                 HELPAction(self)
+            }
+            
             }
         
         }
@@ -288,6 +304,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
             // Yes, stop this walk
             else if (buttonIndex == 1)
             {
+                
+                Firebase.goOffline()
+                
                 print("DEBUG: Stopping the user's walk")
                 
                 self.navigationItem.title = "WALKIE" // Revert title
@@ -300,11 +319,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
                 
                 locationManager.stopUpdatingLocation()
                 
-                
-                if (self.mapView.overlays.count > 0)
-                {
-                    self.mapView.removeOverlay(self.route!.polyline)
+//                let currentOverlays = self.mapView.overlays
+                // Iterate thru the overlays
+                for overlay in self.mapView.overlays {
+                    self.mapView.removeOverlay(overlay)
                 }
+                
+//                if (self.mapView.overlays.count > 0)
+//                {
+//                    self.mapView.removeOverlay(self.route!.polyline)
+//                }
                 
                 let span = MKCoordinateSpanMake(0.0125, 0.0125)
                 let region = MKCoordinateRegion(center: self.mapView.userLocation.location!.coordinate, span: span)
@@ -335,6 +359,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
             self.currentBuffer++
             return
         }
+        
+        // Send location to firebase
+        let userRef = self.ref.childByAppendingPath(currentUser!.objectId)
+        
+        let coords = ["longitude": locations.first!.coordinate.longitude, "latitude": locations.first!.coordinate.latitude, "lastSeen": "\(NSDate().timeIntervalSince1970 * 1000)", "isOnline":true]
+        userRef.setValue(coords)
+        
+        let lastCoords = ["longitude": locations.first!.coordinate.longitude, "latitude": locations.first!.coordinate.latitude, "lastSeen": "\(NSDate().timeIntervalSince1970 * 1000)", "isOnline":false]
+        userRef.onDisconnectSetValue(lastCoords)
+//        userRef.
+        
+//        userRef.setValue(locations.first!.coordinate.latitude, forKey: "latitude")
+//        userRef.setValue(locations.first!.coordinate.longitude, forKey: "longitude")
         
         // Get directions and overlay onto map
         let directionsRequest = MKDirectionsRequest()
@@ -411,15 +448,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
         print(buttonIndex)
         if (buttonIndex == 0)
         {
-            print("911")
+            callNumber("411")
         }
         else if (buttonIndex == 2)
         {
-            print("campus police")
+            callNumber("850-644-1235")
         }
         else if (buttonIndex == 3)
         {
-            print("emergency contact")
+            callNumber("\(self.defaultAlertPreferences.valueForKey("emergencyContact")!)")
         }
         // Request Uber to user location
         else if (buttonIndex == 4)
@@ -427,6 +464,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
             UIApplication.sharedApplication().openURL(NSURL(string: "uber://?action=setPickup&pickup=my_location")!)
         }
     }
+    
+    private func callNumber(phoneNumber:String) {
+        if let phoneCallURL:NSURL = NSURL(string: "tel://\(phoneNumber)") {
+            let application:UIApplication = UIApplication.sharedApplication()
+            if (application.canOpenURL(phoneCallURL)) {
+                application.openURL(phoneCallURL);
+            }
+        }
+    }
+    
 //    override func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
 //        
 //        print("Change")

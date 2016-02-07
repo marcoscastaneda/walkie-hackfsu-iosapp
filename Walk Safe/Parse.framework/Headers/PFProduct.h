@@ -10,63 +10,61 @@
 #import <Foundation/Foundation.h>
 
 #import <Parse/PFFile.h>
+#import <Parse/PFNullability.h>
 #import <Parse/PFObject.h>
 #import <Parse/PFSubclassing.h>
 
-PF_OSX_UNAVAILABLE_WARNING
-PF_WATCH_UNAVAILABLE_WARNING
+PF_ASSUME_NONNULL_BEGIN
 
-NS_ASSUME_NONNULL_BEGIN
-
-/**
+/*!
  The `PFProduct` class represents an in-app purchase product on the Parse server.
  By default, products can only be created via the Data Browser. Saving a `PFProduct` will result in error.
  However, the products' metadata information can be queried and viewed.
 
  This class is currently for iOS only.
  */
-PF_OSX_UNAVAILABLE PF_WATCH_UNAVAILABLE @interface PFProduct : PFObject<PFSubclassing>
+PF_WATCH_UNAVAILABLE @interface PFProduct : PFObject<PFSubclassing>
 
 ///--------------------------------------
-#pragma mark - Product-specific Properties
+/// @name Product-specific Properties
 ///--------------------------------------
 
-/**
- The product identifier of the product.
+/*!
+ @abstract The product identifier of the product.
 
- This should match the product identifier in iTunes Connect exactly.
+ @discussion This should match the product identifier in iTunes Connect exactly.
  */
-@property (nullable, nonatomic, strong) NSString *productIdentifier;
+@property (PF_NULLABLE_PROPERTY nonatomic, strong) NSString *productIdentifier;
 
-/**
- The icon of the product.
+/*!
+ @abstract The icon of the product.
  */
-@property (nullable, nonatomic, strong) PFFile *icon;
+@property (PF_NULLABLE_PROPERTY nonatomic, strong) PFFile *icon;
 
-/**
- The title of the product.
+/*!
+ @abstract The title of the product.
  */
-@property (nullable, nonatomic, strong) NSString *title;
+@property (PF_NULLABLE_PROPERTY nonatomic, strong) NSString *title;
 
-/**
- The subtitle of the product.
+/*!
+ @abstract The subtitle of the product.
  */
-@property (nullable, nonatomic, strong) NSString *subtitle;
+@property (PF_NULLABLE_PROPERTY nonatomic, strong) NSString *subtitle;
 
-/**
- The order in which the product information is displayed in `PFProductTableViewController`.
+/*!
+ @abstract The order in which the product information is displayed in <PFProductTableViewController>.
 
- The product with a smaller order is displayed earlier in the `PFProductTableViewController`.
+ @discussion The product with a smaller order is displayed earlier in the <PFProductTableViewController>.
  */
-@property (nullable, nonatomic, strong) NSNumber *order;
+@property (PF_NULLABLE_PROPERTY nonatomic, strong) NSNumber *order;
 
-/**
- The name of the associated download.
+/*!
+ @abstract The name of the associated download.
 
- If there is no downloadable asset, it should be `nil`.
+ @discussion If there is no downloadable asset, it should be `nil`.
  */
-@property (nullable, nonatomic, strong, readonly) NSString *downloadName;
+@property (PF_NULLABLE_PROPERTY nonatomic, strong, readonly) NSString *downloadName;
 
 @end
 
-NS_ASSUME_NONNULL_END
+PF_ASSUME_NONNULL_END

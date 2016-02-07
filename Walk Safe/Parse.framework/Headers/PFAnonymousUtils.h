@@ -14,9 +14,9 @@
 #import <Parse/PFConstants.h>
 #import <Parse/PFUser.h>
 
-NS_ASSUME_NONNULL_BEGIN
+PF_ASSUME_NONNULL_BEGIN
 
-/**
+/*!
  Provides utility functions for working with Anonymously logged-in users.
  Anonymous users have some unique characteristics:
 
@@ -37,37 +37,46 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PFAnonymousUtils : NSObject
 
 ///--------------------------------------
-#pragma mark - Creating an Anonymous User
+/// @name Creating an Anonymous User
 ///--------------------------------------
 
-/**
- Creates an anonymous user asynchronously and sets as a result to `BFTask`.
+/*!
+ @abstract Creates an anonymous user asynchronously and sets as a result to `BFTask`.
 
- @return The task, that encapsulates the work being done.
+ @returns The task, that encapsulates the work being done.
  */
-+ (BFTask<PFUser *> *)logInInBackground;
++ (BFTask PF_GENERIC(PFUser *)*)logInInBackground;
 
-/**
- Creates an anonymous user asynchronously and performs a provided block.
+/*!
+ @abstract Creates an anonymous user.
 
  @param block The block to execute when anonymous user creation is complete.
  It should have the following argument signature: `^(PFUser *user, NSError *error)`.
  */
-+ (void)logInWithBlock:(nullable PFUserResultBlock)block;
++ (void)logInWithBlock:(PF_NULLABLE PFUserResultBlock)block;
 
-///--------------------------------------
-#pragma mark - Determining Whether a User is Anonymous
-///--------------------------------------
+/*
+ @abstract Creates an anonymous user.
 
-/**
- Whether the `PFUser` object is logged in anonymously.
-
- @param user `PFUser` object to check for anonymity. The user must be logged in on this device.
-
- @return `YES` if the user is anonymous. `NO` if the user is not the current user or is not anonymous.
+ @param target Target object for the selector.
+ @param selector The selector that will be called when the asynchronous request is complete.
+ It should have the following signature: `(void)callbackWithUser:(PFUser *)user error:(NSError *)error`.
  */
-+ (BOOL)isLinkedWithUser:(nullable PFUser *)user;
++ (void)logInWithTarget:(PF_NULLABLE_S id)target selector:(PF_NULLABLE_S SEL)selector;
+
+///--------------------------------------
+/// @name Determining Whether a User is Anonymous
+///--------------------------------------
+
+/*!
+ @abstract Whether the <PFUser> object is logged in anonymously.
+
+ @param user <PFUser> object to check for anonymity. The user must be logged in on this device.
+
+ @returns `YES` if the user is anonymous. `NO` if the user is not the current user or is not anonymous.
+ */
++ (BOOL)isLinkedWithUser:(PF_NULLABLE PFUser *)user;
 
 @end
 
-NS_ASSUME_NONNULL_END
+PF_ASSUME_NONNULL_END

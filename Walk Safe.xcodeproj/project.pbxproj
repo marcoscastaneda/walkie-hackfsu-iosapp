@@ -28,7 +28,6 @@
 		BD4967B81C66ACC2008B6D1C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4967B71C66ACC2008B6D1C /* CFNetwork.framework */; };
 		BD4967BA1C66ACC7008B6D1C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4967B91C66ACC7008B6D1C /* Security.framework */; };
 		BD4967BC1C66ACCE008B6D1C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4967BB1C66ACCE008B6D1C /* SystemConfiguration.framework */; };
-		BD8789541C66F070002C0690 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8789531C66F070002C0690 /* Parse.framework */; };
 		BD8789561C66F0CA002C0690 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD8789551C66F0CA002C0690 /* MapKit.framework */; };
 		BD8789581C67168F002C0690 /* WatchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8789571C67168F002C0690 /* WatchUserViewController.swift */; };
 		BD87895D1C6716DC002C0690 /* tab_inactive_walkie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8789591C6716DC002C0690 /* tab_inactive_walkie@2x.png */; };
@@ -59,6 +58,7 @@
 		BD9A7DC81C667F3800B9CBDF /* SignUpTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DC71C667F3800B9CBDF /* SignUpTableController.swift */; };
 		BD9A7DCA1C66802600B9CBDF /* SignUpFinishTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DC91C66802600B9CBDF /* SignUpFinishTableController.swift */; };
 		BD9A7DCE1C66804600B9CBDF /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DCD1C66804600B9CBDF /* RootViewController.swift */; };
+		BDFB57AC1C67187E00E505EE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFB57AB1C67187E00E505EE /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +100,6 @@
 		BD4967B71C66ACC2008B6D1C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BD4967B91C66ACC7008B6D1C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BD4967BB1C66ACCE008B6D1C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		BD8789531C66F070002C0690 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		BD8789551C66F0CA002C0690 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BD8789571C67168F002C0690 /* WatchUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchUserViewController.swift; sourceTree = "<group>"; };
 		BD8789591C6716DC002C0690 /* tab_inactive_walkie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_inactive_walkie@2x.png"; sourceTree = "<group>"; };
@@ -141,6 +140,7 @@
 		BD9A7DC71C667F3800B9CBDF /* SignUpTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableController.swift; sourceTree = "<group>"; };
 		BD9A7DC91C66802600B9CBDF /* SignUpFinishTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFinishTableController.swift; sourceTree = "<group>"; };
 		BD9A7DCD1C66804600B9CBDF /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		BDFB57AB1C67187E00E505EE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +153,8 @@
 				BD8789561C66F0CA002C0690 /* MapKit.framework in Frameworks */,
 				BD97B6ED1C66CC7100F6C675 /* StoreKit.framework in Frameworks */,
 				BD4967BA1C66ACC7008B6D1C /* Security.framework in Frameworks */,
-				BD8789541C66F070002C0690 /* Parse.framework in Frameworks */,
 				BD97B6EB1C66CC6200F6C675 /* QuartzCore.framework in Frameworks */,
+				BDFB57AC1C67187E00E505EE /* Parse.framework in Frameworks */,
 				BD97B6E91C66CC5B00F6C675 /* CoreLocation.framework in Frameworks */,
 				BD97B6E71C66CC5000F6C675 /* CoreGraphics.framework in Frameworks */,
 				BD97B6E51C66CC4300F6C675 /* AudioToolbox.framework in Frameworks */,
@@ -289,8 +289,8 @@
 		BD97B6E31C66CC2C00F6C675 /* Parse+Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				BDFB57AB1C67187E00E505EE /* Parse.framework */,
 				BD8789551C66F0CA002C0690 /* MapKit.framework */,
-				BD8789531C66F070002C0690 /* Parse.framework */,
 				BD03A5A51C66CF21001D1A82 /* Bolts.framework */,
 				BD97B6F01C66CC8100F6C675 /* libsqlite3.tbd */,
 				BD97B6EE1C66CC7B00F6C675 /* libz.tbd */,
@@ -456,6 +456,7 @@
 				TargetAttributes = {
 					BD9A7D8C1C66679300B9CBDF = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = Y5Q9CABWG8;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -695,8 +696,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Walk",
+					Safe,
 					"$(PROJECT_DIR)/Walk",
 					Safe,
 					"$(PROJECT_DIR)/Walk",
@@ -711,6 +716,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mcastaneda.Walk-Safe";
 				PRODUCT_NAME = walkie;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Walk Safe/Walk Safe-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -721,8 +727,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Walk",
+					Safe,
 					"$(PROJECT_DIR)/Walk",
 					Safe,
 					"$(PROJECT_DIR)/Walk",
@@ -737,6 +747,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mcastaneda.Walk-Safe";
 				PRODUCT_NAME = walkie;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Walk Safe/Walk Safe-Bridging-Header.h";
 			};
 			name = Release;

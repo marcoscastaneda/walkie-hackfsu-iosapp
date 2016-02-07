@@ -10,103 +10,105 @@
 #import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+#import <Parse/PFNullability.h>
+
+PF_ASSUME_NONNULL_BEGIN
 
 @class PFGeoPoint;
 
-typedef void(^PFGeoPointResultBlock)(PFGeoPoint *_Nullable geoPoint, NSError *_Nullable error);
+typedef void(^PFGeoPointResultBlock)(PFGeoPoint *PF_NULLABLE_S geoPoint, NSError *PF_NULLABLE_S error);
 
-/**
- `PFGeoPoint` may be used to embed a latitude / longitude point as the value for a key in a `PFObject`.
- It could be used to perform queries in a geospatial manner using `PFQuery.-whereKey:nearGeoPoint:`.
+/*!
+ `PFGeoPoint` may be used to embed a latitude / longitude point as the value for a key in a <PFObject>.
+ It could be used to perform queries in a geospatial manner using <[PFQuery whereKey:nearGeoPoint:]>.
 
- Currently, instances of `PFObject` may only have one key associated with a `PFGeoPoint` type.
+ Currently, instances of <PFObject> may only have one key associated with a `PFGeoPoint` type.
  */
 @interface PFGeoPoint : NSObject <NSCopying, NSCoding>
 
 ///--------------------------------------
-#pragma mark - Creating a Geo Point
+/// @name Creating a Geo Point
 ///--------------------------------------
 
-/**
- Create a PFGeoPoint object. Latitude and longitude are set to `0.0`.
+/*!
+ @abstract Create a PFGeoPoint object. Latitude and longitude are set to `0.0`.
 
- @return Returns a new `PFGeoPoint`.
+ @returns Returns a new `PFGeoPoint`.
  */
 + (instancetype)geoPoint;
 
-/**
- Creates a new `PFGeoPoint` object for the given `CLLocation`, set to the location's coordinates.
+/*!
+ @abstract Creates a new `PFGeoPoint` object for the given `CLLocation`, set to the location's coordinates.
 
  @param location Instace of `CLLocation`, with set latitude and longitude.
 
- @return Returns a new PFGeoPoint at specified location.
+ @returns Returns a new PFGeoPoint at specified location.
  */
-+ (instancetype)geoPointWithLocation:(nullable CLLocation *)location;
++ (instancetype)geoPointWithLocation:(PF_NULLABLE CLLocation *)location;
 
-/**
- Create a new `PFGeoPoint` object with the specified latitude and longitude.
+/*!
+ @abstract Create a new `PFGeoPoint` object with the specified latitude and longitude.
 
  @param latitude Latitude of point in degrees.
  @param longitude Longitude of point in degrees.
 
- @return New point object with specified latitude and longitude.
+ @returns New point object with specified latitude and longitude.
  */
 + (instancetype)geoPointWithLatitude:(double)latitude longitude:(double)longitude;
 
-/**
- Fetches the current device location and executes a block with a new `PFGeoPoint` object.
+/*!
+ @abstract Fetches the current device location and executes a block with a new `PFGeoPoint` object.
 
  @param resultBlock A block which takes the newly created `PFGeoPoint` as an argument.
  It should have the following argument signature: `^(PFGeoPoint *geoPoint, NSError *error)`
  */
-+ (void)geoPointForCurrentLocationInBackground:(nullable PFGeoPointResultBlock)resultBlock;
++ (void)geoPointForCurrentLocationInBackground:(PF_NULLABLE PFGeoPointResultBlock)resultBlock;
 
 ///--------------------------------------
-#pragma mark - Controlling Position
+/// @name Controlling Position
 ///--------------------------------------
 
-/**
- Latitude of point in degrees. Valid range is from `-90.0` to `90.0`.
+/*!
+ @abstract Latitude of point in degrees. Valid range is from `-90.0` to `90.0`.
  */
 @property (nonatomic, assign) double latitude;
 
-/**
- Longitude of point in degrees. Valid range is from `-180.0` to `180.0`.
+/*!
+ @abstract Longitude of point in degrees. Valid range is from `-180.0` to `180.0`.
  */
 @property (nonatomic, assign) double longitude;
 
 ///--------------------------------------
-#pragma mark - Calculating Distance
+/// @name Calculating Distance
 ///--------------------------------------
 
-/**
- Get distance in radians from this point to specified point.
+/*!
+ @abstract Get distance in radians from this point to specified point.
 
  @param point `PFGeoPoint` that represents the location of other point.
 
- @return Distance in radians between the receiver and `point`.
+ @returns Distance in radians between the receiver and `point`.
  */
-- (double)distanceInRadiansTo:(nullable PFGeoPoint *)point;
+- (double)distanceInRadiansTo:(PF_NULLABLE PFGeoPoint *)point;
 
-/**
- Get distance in miles from this point to specified point.
+/*!
+ @abstract Get distance in miles from this point to specified point.
 
  @param point `PFGeoPoint` that represents the location of other point.
 
- @return Distance in miles between the receiver and `point`.
+ @returns Distance in miles between the receiver and `point`.
  */
-- (double)distanceInMilesTo:(nullable PFGeoPoint *)point;
+- (double)distanceInMilesTo:(PF_NULLABLE PFGeoPoint *)point;
 
-/**
- Get distance in kilometers from this point to specified point.
+/*!
+ @abstract Get distance in kilometers from this point to specified point.
 
  @param point `PFGeoPoint` that represents the location of other point.
 
- @return Distance in kilometers between the receiver and `point`.
+ @returns Distance in kilometers between the receiver and `point`.
  */
-- (double)distanceInKilometersTo:(nullable PFGeoPoint *)point;
+- (double)distanceInKilometersTo:(PF_NULLABLE PFGeoPoint *)point;
 
 @end
 
-NS_ASSUME_NONNULL_END
+PF_ASSUME_NONNULL_END

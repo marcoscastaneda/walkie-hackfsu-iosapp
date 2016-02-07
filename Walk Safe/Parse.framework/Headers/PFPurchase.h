@@ -11,30 +11,28 @@
 #import <StoreKit/StoreKit.h>
 
 #import <Parse/PFConstants.h>
-
-PF_OSX_UNAVAILABLE_WARNING
-PF_WATCH_UNAVAILABLE_WARNING
+#import <Parse/PFNullability.h>
 
 @class PFProduct;
 
-NS_ASSUME_NONNULL_BEGIN
+PF_ASSUME_NONNULL_BEGIN
 
 typedef void (^PFPurchaseProductObservationBlock)(SKPaymentTransaction *transaction);
-typedef void (^PFPurchaseBuyProductResultBlock)(NSError *_Nullable error);
-typedef void (^PFPurchaseDownloadAssetResultBlock)(NSString *_Nullable filePath, NSError *_Nullable error);
+typedef void (^PFPurchaseBuyProductResultBlock)(NSError *PF_NULLABLE_S error);
+typedef void (^PFPurchaseDownloadAssetResultBlock)(NSString *PF_NULLABLE_S filePath, NSError *PF_NULLABLE_S error);
 
-/**
+/*!
  `PFPurchase` provides a set of APIs for working with in-app purchases.
 
  This class is currently for iOS only.
  */
-PF_OSX_UNAVAILABLE PF_WATCH_UNAVAILABLE @interface PFPurchase : NSObject
+@interface PFPurchase : NSObject
 
-/**
- Add application logic block which is run when buying a product.
+/*!
+ @abstract Add application logic block which is run when buying a product.
 
- This method should be called once for each product, and should be called before
- calling `+buyProduct:block:`. All invocations to `+addObserverForProduct:block:` should happen within
+ @discussion This method should be called once for each product, and should be called before
+ calling <buyProduct:block:>. All invocations to <addObserverForProduct:block:> should happen within
  the same method, and on the main thread. It is recommended to place all invocations of this method
  in `application:didFinishLaunchingWithOptions:`.
 
@@ -43,18 +41,18 @@ PF_OSX_UNAVAILABLE PF_WATCH_UNAVAILABLE @interface PFPurchase : NSObject
  */
 + (void)addObserverForProduct:(NSString *)productIdentifier block:(PFPurchaseProductObservationBlock)block;
 
-/**
- *Asynchronously* initiates the purchase for the product.
+/*!
+ @abstract *Asynchronously* initiates the purchase for the product.
 
  @param productIdentifier the product identifier
  @param block the completion block.
  */
-+ (void)buyProduct:(NSString *)productIdentifier block:(nullable PFPurchaseBuyProductResultBlock)block;
++ (void)buyProduct:(NSString *)productIdentifier block:(PFPurchaseBuyProductResultBlock)block;
 
-/**
- *Asynchronously* download the purchased asset, which is stored on Parse's server.
+/*!
+ @abstract *Asynchronously* download the purchased asset, which is stored on Parse's server.
 
- Parse verifies the receipt with Apple and delivers the content only if the receipt is valid.
+ @discussion Parse verifies the receipt with Apple and delivers the content only if the receipt is valid.
 
  @param transaction the transaction, which contains the receipt.
  @param completion the completion block.
@@ -62,10 +60,10 @@ PF_OSX_UNAVAILABLE PF_WATCH_UNAVAILABLE @interface PFPurchase : NSObject
 + (void)downloadAssetForTransaction:(SKPaymentTransaction *)transaction
                          completion:(PFPurchaseDownloadAssetResultBlock)completion;
 
-/**
- *Asynchronously* download the purchased asset, which is stored on Parse's server.
+/*!
+ @abstract *Asynchronously* download the purchased asset, which is stored on Parse's server.
 
- Parse verifies the receipt with Apple and delivers the content only if the receipt is valid.
+ @discussion Parse verifies the receipt with Apple and delivers the content only if the receipt is valid.
 
  @param transaction the transaction, which contains the receipt.
  @param completion the completion block.
@@ -73,12 +71,12 @@ PF_OSX_UNAVAILABLE PF_WATCH_UNAVAILABLE @interface PFPurchase : NSObject
  */
 + (void)downloadAssetForTransaction:(SKPaymentTransaction *)transaction
                          completion:(PFPurchaseDownloadAssetResultBlock)completion
-                           progress:(nullable PFProgressBlock)progress;
+                           progress:(PF_NULLABLE PFProgressBlock)progress;
 
-/**
- *Asynchronously* restore completed transactions for the current user.
+/*!
+ @abstract *Asynchronously* restore completed transactions for the current user.
 
- Only nonconsumable purchases are restored. If observers for the products have been added before
+ @discussion Only nonconsumable purchases are restored. If observers for the products have been added before
  calling this method, invoking the method reruns the application logic associated with the purchase.
 
  @warning This method is only important to developers who want to preserve purchase states across
@@ -86,15 +84,15 @@ PF_OSX_UNAVAILABLE PF_WATCH_UNAVAILABLE @interface PFPurchase : NSObject
  */
 + (void)restore;
 
-/**
- Returns a content path of the asset of a product, if it was purchased and downloaded.
+/*!
+ @abstract Returns a content path of the asset of a product, if it was purchased and downloaded.
 
- To download and verify purchases use `+downloadAssetForTransaction:completion:`.
+ @discussion To download and verify purchases use <downloadAssetForTransaction:completion:>.
 
  @warning This method will return `nil`, if the purchase wasn't verified or if the asset was not downloaded.
  */
-+ (nullable NSString *)assetContentPathForProduct:(PFProduct *)product;
++ (PF_NULLABLE NSString *)assetContentPathForProduct:(PFProduct *)product;
 
 @end
 
-NS_ASSUME_NONNULL_END
+PF_ASSUME_NONNULL_END
