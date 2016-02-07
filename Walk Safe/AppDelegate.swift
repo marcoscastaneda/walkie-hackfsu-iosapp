@@ -51,6 +51,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
+        // Keep user logged in
+        if ((PFUser.currentUser()) != nil)
+        {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let rootController = storyboard.instantiateViewControllerWithIdentifier("LoggedInRoot") as! UITabBarController
+            
+            if (self.window != nil)
+            {
+                self.window!.rootViewController = rootController
+            }
+        }
+        
         return true
     }
 
