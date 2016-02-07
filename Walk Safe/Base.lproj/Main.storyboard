@@ -354,17 +354,17 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="gN5-ox-Bvw">
-                                        <rect key="frame" x="0.0" y="344" width="375" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="55" id="gN5-ox-Bvw">
+                                        <rect key="frame" x="0.0" y="344" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gN5-ox-Bvw" id="yl4-X1-ce7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="Jql-n5-vGs">
-                                        <rect key="frame" x="0.0" y="414" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="399" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jql-n5-vGs" id="b7K-q3-abN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
@@ -822,17 +822,20 @@
                         <viewControllerLayoutGuide type="bottom" id="2RU-bq-83b"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eOu-2D-3LD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5p-ws-c0c">
-                                <rect key="frame" x="20" y="161" width="335" height="48"/>
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="guw-1x-Ua1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5p-ws-c0c">
+                                <rect key="frame" x="0.0" y="109" width="375" height="56"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter friend's e-mail address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugj-J8-QSK">
-                                        <rect key="frame" x="8" y="6" width="319" height="37"/>
+                                        <rect key="frame" x="28" y="9" width="319" height="37"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="go"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                 <color key="value" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -842,31 +845,23 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.12996397453083108" green="0.12996397453083108" blue="0.12996397453083108" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="94B-xx-x6g"/>
+                                    <constraint firstAttribute="height" constant="56" id="Qs3-NN-geh"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
-                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="guw-1x-Ua1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="guw-1x-Ua1" firstAttribute="top" secondItem="jCR-Kt-7KI" secondAttribute="bottom" id="Laa-hK-caq"/>
-                            <constraint firstAttribute="bottom" secondItem="guw-1x-Ua1" secondAttribute="bottom" id="VPh-kE-XkV"/>
-                            <constraint firstItem="guw-1x-Ua1" firstAttribute="leading" secondItem="eOu-2D-3LD" secondAttribute="leading" id="cdN-DM-SDN"/>
-                            <constraint firstAttribute="trailing" secondItem="guw-1x-Ua1" secondAttribute="trailing" id="flA-AP-HpZ"/>
-                            <constraint firstItem="E5p-ws-c0c" firstAttribute="top" secondItem="jCR-Kt-7KI" secondAttribute="bottom" constant="97" id="h0n-Yf-LGb"/>
-                            <constraint firstAttribute="trailing" secondItem="E5p-ws-c0c" secondAttribute="trailing" constant="20" id="qO4-h7-Lw4"/>
-                            <constraint firstItem="E5p-ws-c0c" firstAttribute="leading" secondItem="eOu-2D-3LD" secondAttribute="leading" constant="20" id="sCo-fl-D1r"/>
+                            <constraint firstItem="guw-1x-Ua1" firstAttribute="top" secondItem="jCR-Kt-7KI" secondAttribute="bottom" id="10d-LC-8Td"/>
+                            <constraint firstAttribute="trailing" secondItem="E5p-ws-c0c" secondAttribute="trailing" id="CCy-0K-Hls"/>
+                            <constraint firstAttribute="trailing" secondItem="guw-1x-Ua1" secondAttribute="trailing" id="O6I-7n-Mks"/>
+                            <constraint firstAttribute="bottom" secondItem="guw-1x-Ua1" secondAttribute="bottom" id="P5d-xw-dkK"/>
+                            <constraint firstItem="E5p-ws-c0c" firstAttribute="leading" secondItem="eOu-2D-3LD" secondAttribute="leading" id="WNC-i5-baQ"/>
+                            <constraint firstItem="guw-1x-Ua1" firstAttribute="leading" secondItem="eOu-2D-3LD" secondAttribute="leading" id="hS3-t0-I0h"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="7Zl-AT-8Xv">
-                        <barButtonItem key="rightBarButtonItem" title="Start Walk" id="IiW-G4-95X">
+                        <barButtonItem key="rightBarButtonItem" title="Go" id="IiW-G4-95X">
                             <connections>
                                 <action selector="walkAction:" destination="sIc-mM-CNV" id="CcX-2Y-2BA"/>
                             </connections>

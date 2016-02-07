@@ -3,3 +3,4 @@
 //
 
 #import "JDStatusBarNotification.h"
+#import "MBProgressHUD.h"

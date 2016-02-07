@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "48D5ECF56E68E31E603E23474D6726C8FECA925E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E2B576369EBCD13098799FC65F10095A12965A87" : 0,
+    "48D5ECF56E68E31E603E23474D6726C8FECA925E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "13C0118B-32B9-499A-8F5F-E7AF6A77354F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E2B576369EBCD13098799FC65F10095A12965A87" : "..\/School\/On%20Your%20Way",
+    "48D5ECF56E68E31E603E23474D6726C8FECA925E" : "Walk%20Safe\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Walk Safe",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Walk Safe.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/marcoscastaneda\/walkie-hackfsu-iosapp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "48D5ECF56E68E31E603E23474D6726C8FECA925E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/marcoscastaneda\/on-your-way-swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2B576369EBCD13098799FC65F10095A12965A87"
+    }
+  ]
+}

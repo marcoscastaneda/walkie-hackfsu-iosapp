@@ -351,15 +351,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        // Prevent calling this function logic so often
-        if (self.currentBuffer >= 7)
-        {
-            self.currentBuffer = 0
-        } else {
-            self.currentBuffer++
-            return
-        }
-        
         // Send location to firebase
         let userRef = self.ref.childByAppendingPath(currentUser!.objectId)
         
@@ -368,10 +359,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
         
         let lastCoords = ["longitude": locations.first!.coordinate.longitude, "latitude": locations.first!.coordinate.latitude, "lastSeen": "\(NSDate().timeIntervalSince1970 * 1000)", "isOnline":false]
         userRef.onDisconnectSetValue(lastCoords)
-//        userRef.
         
-//        userRef.setValue(locations.first!.coordinate.latitude, forKey: "latitude")
-//        userRef.setValue(locations.first!.coordinate.longitude, forKey: "longitude")
+        // Prevent calling this function logic so often
+        if (self.currentBuffer >= 3)
+        {
+            self.currentBuffer = 0
+        } else {
+            self.currentBuffer++
+            return
+        }
+        
         
         // Get directions and overlay onto map
         let directionsRequest = MKDirectionsRequest()

@@ -19,6 +19,10 @@
 		BD18FB981C668CA0004AFA47 /* tab_inactive_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB941C668CA0004AFA47 /* tab_inactive_settings@2x.png */; };
 		BD18FB9B1C66905C004AFA47 /* SinkinSans-400Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB991C66905C004AFA47 /* SinkinSans-400Regular.otf */; };
 		BD18FB9C1C66905C004AFA47 /* SinkinSans-500Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB9A1C66905C004AFA47 /* SinkinSans-500Medium.otf */; };
+		BD42D9B51C672CE20014F93E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD42D9B41C672CE20014F93E /* Parse.framework */; };
+		BD42D9BA1C6734D10014F93E /* marker_person.png in Resources */ = {isa = PBXBuildFile; fileRef = BD42D9B81C6734D10014F93E /* marker_person.png */; };
+		BD42D9BB1C6734D10014F93E /* marker_person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD42D9B91C6734D10014F93E /* marker_person@2x.png */; };
+		BD42D9BF1C673B020014F93E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BD42D9BD1C673B020014F93E /* MBProgressHUD.m */; };
 		BD4967A81C6692DD008B6D1C /* image_hero_walking2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD4967A71C6692DD008B6D1C /* image_hero_walking2.jpg */; };
 		BD4967AB1C669C72008B6D1C /* marker_green.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4967A91C669C72008B6D1C /* marker_green.png */; };
 		BD4967AC1C669C72008B6D1C /* marker_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4967AA1C669C72008B6D1C /* marker_green@2x.png */; };
@@ -58,7 +62,6 @@
 		BD9A7DC81C667F3800B9CBDF /* SignUpTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DC71C667F3800B9CBDF /* SignUpTableController.swift */; };
 		BD9A7DCA1C66802600B9CBDF /* SignUpFinishTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DC91C66802600B9CBDF /* SignUpFinishTableController.swift */; };
 		BD9A7DCE1C66804600B9CBDF /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DCD1C66804600B9CBDF /* RootViewController.swift */; };
-		BDFB57AC1C67187E00E505EE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFB57AB1C67187E00E505EE /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,11 @@
 		BD18FB941C668CA0004AFA47 /* tab_inactive_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_inactive_settings@2x.png"; sourceTree = "<group>"; };
 		BD18FB991C66905C004AFA47 /* SinkinSans-400Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SinkinSans-400Regular.otf"; sourceTree = "<group>"; };
 		BD18FB9A1C66905C004AFA47 /* SinkinSans-500Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SinkinSans-500Medium.otf"; sourceTree = "<group>"; };
+		BD42D9B41C672CE20014F93E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		BD42D9B81C6734D10014F93E /* marker_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_person.png; sourceTree = "<group>"; };
+		BD42D9B91C6734D10014F93E /* marker_person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker_person@2x.png"; sourceTree = "<group>"; };
+		BD42D9BC1C673B020014F93E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		BD42D9BD1C673B020014F93E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		BD4967A71C6692DD008B6D1C /* image_hero_walking2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_hero_walking2.jpg; sourceTree = "<group>"; };
 		BD4967A91C669C72008B6D1C /* marker_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_green.png; sourceTree = "<group>"; };
 		BD4967AA1C669C72008B6D1C /* marker_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker_green@2x.png"; sourceTree = "<group>"; };
@@ -140,7 +148,6 @@
 		BD9A7DC71C667F3800B9CBDF /* SignUpTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableController.swift; sourceTree = "<group>"; };
 		BD9A7DC91C66802600B9CBDF /* SignUpFinishTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFinishTableController.swift; sourceTree = "<group>"; };
 		BD9A7DCD1C66804600B9CBDF /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		BDFB57AB1C67187E00E505EE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +161,7 @@
 				BD97B6ED1C66CC7100F6C675 /* StoreKit.framework in Frameworks */,
 				BD4967BA1C66ACC7008B6D1C /* Security.framework in Frameworks */,
 				BD97B6EB1C66CC6200F6C675 /* QuartzCore.framework in Frameworks */,
-				BDFB57AC1C67187E00E505EE /* Parse.framework in Frameworks */,
+				BD42D9B51C672CE20014F93E /* Parse.framework in Frameworks */,
 				BD97B6E91C66CC5B00F6C675 /* CoreLocation.framework in Frameworks */,
 				BD97B6E71C66CC5000F6C675 /* CoreGraphics.framework in Frameworks */,
 				BD97B6E51C66CC4300F6C675 /* AudioToolbox.framework in Frameworks */,
@@ -232,9 +239,21 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		BD42D9BE1C673B020014F93E /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BD42D9BC1C673B020014F93E /* MBProgressHUD.h */,
+				BD42D9BD1C673B020014F93E /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			path = "../../../School/On Your Way/On Your Way";
+			sourceTree = "<group>";
+		};
 		BD4967AD1C669C74008B6D1C /* Annotation Pins */ = {
 			isa = PBXGroup;
 			children = (
+				BD42D9B81C6734D10014F93E /* marker_person.png */,
+				BD42D9B91C6734D10014F93E /* marker_person@2x.png */,
 				BD4967A91C669C72008B6D1C /* marker_green.png */,
 				BD4967AA1C669C72008B6D1C /* marker_green@2x.png */,
 			);
@@ -244,6 +263,7 @@
 		BD4967B21C66AC9A008B6D1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD42D9BE1C673B020014F93E /* MBProgressHUD */,
 				BD97B6E31C66CC2C00F6C675 /* Parse+Dependencies */,
 				BD97B6D81C66AE6600F6C675 /* JDStatusBar */,
 				BD97B6D91C66AE6D00F6C675 /* Firebase+Dependencies */,
@@ -289,7 +309,7 @@
 		BD97B6E31C66CC2C00F6C675 /* Parse+Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				BDFB57AB1C67187E00E505EE /* Parse.framework */,
+				BD42D9B41C672CE20014F93E /* Parse.framework */,
 				BD8789551C66F0CA002C0690 /* MapKit.framework */,
 				BD03A5A51C66CF21001D1A82 /* Bolts.framework */,
 				BD97B6F01C66CC8100F6C675 /* libsqlite3.tbd */,
@@ -505,10 +525,12 @@
 				BD18FB981C668CA0004AFA47 /* tab_inactive_settings@2x.png in Resources */,
 				BD97B6DE1C66C30400F6C675 /* placeholder_user.png in Resources */,
 				BD9A7DC21C666B9B00B9CBDF /* image_hero_walking.jpg in Resources */,
+				BD42D9BA1C6734D10014F93E /* marker_person.png in Resources */,
 				BD4967AB1C669C72008B6D1C /* marker_green.png in Resources */,
 				BD18FB971C668CA0004AFA47 /* tab_active_settings@2x.png in Resources */,
 				BD9A7D981C66679300B9CBDF /* Assets.xcassets in Resources */,
 				BD18FB9C1C66905C004AFA47 /* SinkinSans-500Medium.otf in Resources */,
+				BD42D9BB1C6734D10014F93E /* marker_person@2x.png in Resources */,
 				BD8789601C6716DC002C0690 /* tab_inactive_walkie.png in Resources */,
 				BD87895E1C6716DC002C0690 /* tab_active_walkie@2x.png in Resources */,
 				BD18FB951C668CA0004AFA47 /* tab_inactive_settings.png in Resources */,
@@ -553,6 +575,7 @@
 				BD9A7DCE1C66804600B9CBDF /* RootViewController.swift in Sources */,
 				BD97B6D71C66AE6300F6C675 /* JDStatusBarView.m in Sources */,
 				BD97B6D61C66AE6300F6C675 /* JDStatusBarStyle.m in Sources */,
+				BD42D9BF1C673B020014F93E /* MBProgressHUD.m in Sources */,
 				BD9A7D911C66679300B9CBDF /* AppDelegate.swift in Sources */,
 				BD9A7DC61C667C5300B9CBDF /* LogInTableController.swift in Sources */,
 				BD97B6DB1C66C21600F6C675 /* TheUser.swift in Sources */,
@@ -710,6 +733,8 @@
 					Safe,
 					"$(PROJECT_DIR)/Walk",
 					Safe,
+					"$(PROJECT_DIR)/Walk",
+					Safe,
 				);
 				INFOPLIST_FILE = "Walk Safe/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -731,6 +756,8 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Walk",
+					Safe,
 					"$(PROJECT_DIR)/Walk",
 					Safe,
 					"$(PROJECT_DIR)/Walk",

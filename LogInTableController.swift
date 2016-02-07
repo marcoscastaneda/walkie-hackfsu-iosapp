@@ -35,17 +35,21 @@ class LogInTableController: UITableViewController {
     
     
     @IBAction func logInTouched(sender: AnyObject) {
-    
+        
+        // Show loading hud
+        let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.mode = MBProgressHUDMode.Indeterminate
         
         PFUser.logInWithUsernameInBackground(self.textFieldEmailAddress.text!, password: self.textFieldPassword.text!) { (user: PFUser?, error: NSError?) -> Void in
             
             if (error != nil)
             {
+                hud.hide(true)
                 JDStatusBarNotification.showWithStatus(error!.localizedDescription, dismissAfter: NSTimeInterval.abs(3), styleName: JDStatusBarStyleError)
             }
             else
             {
-
+                hud.hide(true)
                 self.navigationController!.presentViewController(self.storyboard!.instantiateViewControllerWithIdentifier("LoggedInRoot") as! UITabBarController, animated: true, completion: nil)
             }
         }

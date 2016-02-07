@@ -52,6 +52,10 @@ class SignUpFinishTableController: UITableViewController {
                 return
             }
             
+            // Show loading hud
+            let hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+            hud.mode = MBProgressHUDMode.Indeterminate
+            
             let user = PFUser()
             user.username = self.textFieldEmailAddress.text
             user.password = self.textFieldPassword1.text
@@ -62,10 +66,12 @@ class SignUpFinishTableController: UITableViewController {
             
             user.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
                 if success {
-                      self.navigationController!.presentViewController(self.storyboard!.instantiateViewControllerWithIdentifier("LoggedInRoot") as! UITabBarController, animated: true, completion: nil)
+                      hud.hide(true)
+                        self.navigationController!.presentViewController(self.storyboard!.instantiateViewControllerWithIdentifier("LoggedInRoot") as! UITabBarController, animated: true, completion: nil)
                 }
                 else if error != nil
                 {
+                    hud.hide(false)
                     JDStatusBarNotification.showWithStatus(error!.localizedDescription, dismissAfter: NSTimeInterval.abs(3), styleName: JDStatusBarStyleError)
                 }
             })
