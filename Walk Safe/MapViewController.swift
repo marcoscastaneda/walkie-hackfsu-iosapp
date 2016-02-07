@@ -12,6 +12,7 @@ import CoreLocation
 import AddressBookUI
 import Firebase
 import Parse
+import AudioToolbox
 
 class MapPin : NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
@@ -390,7 +391,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
             if error == nil {
                 self.route = response!.routes[0] as MKRoute
                 self.mapView.addOverlay(self.route!.polyline)
-                var ETA = Int(self.route!.expectedTravelTime / 60)
+                let ETA = Int(self.route!.expectedTravelTime / 60)
             
                 self.navigationItem.title = "ETA: \(ETA) MIN"
             }
@@ -419,6 +420,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
     
 //    MARK: - HELP
     @IBAction func HELPAction(sender: AnyObject) {
+        
+        // Play mp3 if settings allow
+        if (self.defaultAlertPreferences.boolForKey("audibleAlert") == true)
+        {
+            // Play alarm
+            AudioServicesPlaySystemSound(1304)
+        }
+
         
         let actionSheet = UIActionSheet(title: "If you are in imminent danger, CALL 911 NOW.", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: "Call 911", otherButtonTitles: "Call FSU Police")
         
@@ -471,6 +480,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIAlertViewDelegat
         }
     }
     
+    func mapView(mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        self.view.endEditing(true)
+    }
+
 //    override func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
 //        
 //        print("Change")

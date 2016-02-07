@@ -100,7 +100,7 @@ class WatchUserViewController: UIViewController, MKMapViewDelegate, UIAlertViewD
             self.navigationItem.rightBarButtonItem!.title = "Stop"
             
             
-            let userRef = self.ref.childByAppendingPath(self.userObjectID)
+//            let userRef = self.ref.childByAppendingPath(self.userObjectID)
             
             self.ref.observeEventType(FEventType.ChildChanged, withBlock: { (snap: FDataSnapshot!) -> Void in
                 

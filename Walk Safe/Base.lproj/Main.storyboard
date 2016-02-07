@@ -14,7 +14,7 @@
         <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Root" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="RootViewController" customModule="walkie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Root" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="RootViewController" customModule="Walkie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -98,7 +98,7 @@
         <!--Log In Table Controller-->
         <scene sceneID="gUN-EZ-FYq">
             <objects>
-                <tableViewController id="hgd-OO-sFk" customClass="LogInTableController" customModule="walkie" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="hgd-OO-sFk" customClass="LogInTableController" customModule="Walkie" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mor-4L-Y2s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,7 +191,7 @@
         <!--Sign Up Table Controller-->
         <scene sceneID="SsF-rC-93s">
             <objects>
-                <tableViewController id="671-TE-Lme" customClass="SignUpTableController" customModule="walkie" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="671-TE-Lme" customClass="SignUpTableController" customModule="Walkie" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JD6-aD-ewN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,7 +219,7 @@
                                                     <rect key="frame" x="13" y="15" width="349" height="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="alphabet" keyboardAppearance="alert"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="alert"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                             <color key="value" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -263,7 +263,7 @@
         <!--Sign Up Finish Table Controller-->
         <scene sceneID="EHh-19-Vvx">
             <objects>
-                <tableViewController id="RWl-Ig-32z" customClass="SignUpFinishTableController" customModule="walkie" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="RWl-Ig-32z" customClass="SignUpFinishTableController" customModule="Walkie" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Oc-AO-meX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -454,7 +454,7 @@
         <!--Map View Controller-->
         <scene sceneID="i8G-pM-2Ot">
             <objects>
-                <viewController id="fTH-mr-xku" customClass="MapViewController" customModule="walkie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fTH-mr-xku" customClass="MapViewController" customModule="Walkie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cOV-Nf-HQw"/>
                         <viewControllerLayoutGuide type="bottom" id="c48-aD-jzO"/>
@@ -466,7 +466,7 @@
                             <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tRx-9i-yDu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zuu-Ox-531">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zuu-Ox-531">
                                 <rect key="frame" x="20" y="222" width="335" height="110"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <state key="normal" title="Finding your location...">
@@ -508,7 +508,10 @@
                             <constraint firstItem="c48-aD-jzO" firstAttribute="top" secondItem="tRx-9i-yDu" secondAttribute="bottom" constant="-49" id="5GB-GZ-Fdg"/>
                             <constraint firstItem="tRx-9i-yDu" firstAttribute="leading" secondItem="B3p-GR-Pr1" secondAttribute="leading" id="Gwd-2r-qcj"/>
                             <constraint firstItem="9pO-zz-c7M" firstAttribute="top" secondItem="cOV-Nf-HQw" secondAttribute="bottom" id="HjY-SZ-4ab"/>
+                            <constraint firstItem="Zuu-Ox-531" firstAttribute="top" secondItem="9pO-zz-c7M" secondAttribute="bottom" constant="178" id="JuD-eN-oZM"/>
+                            <constraint firstItem="Zuu-Ox-531" firstAttribute="leading" secondItem="B3p-GR-Pr1" secondAttribute="leading" constant="20" id="MpK-Wf-3MD"/>
                             <constraint firstAttribute="trailing" secondItem="9pO-zz-c7M" secondAttribute="trailing" id="NUy-Yg-41A"/>
+                            <constraint firstAttribute="trailing" secondItem="Zuu-Ox-531" secondAttribute="trailing" constant="20" id="PXt-l9-HOs"/>
                             <constraint firstAttribute="trailing" secondItem="RQG-FV-ig0" secondAttribute="trailing" id="ZeH-bk-7oJ"/>
                             <constraint firstAttribute="trailing" secondItem="tRx-9i-yDu" secondAttribute="trailing" id="f5C-Z7-GOE"/>
                             <constraint firstAttribute="bottom" secondItem="RQG-FV-ig0" secondAttribute="bottom" id="oIY-oa-QGW"/>
@@ -562,7 +565,7 @@
         <!--Settings Table Controller-->
         <scene sceneID="6PM-u3-Qwg">
             <objects>
-                <tableViewController id="KZ5-Cf-fx8" customClass="SettingsTableController" customModule="walkie" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="KZ5-Cf-fx8" customClass="SettingsTableController" customModule="Walkie" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MOp-V8-cJJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -816,7 +819,7 @@
         <!--Watch User View Controller-->
         <scene sceneID="lty-Rs-rWT">
             <objects>
-                <viewController id="sIc-mM-CNV" customClass="WatchUserViewController" customModule="walkie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sIc-mM-CNV" customClass="WatchUserViewController" customModule="Walkie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jCR-Kt-7KI"/>
                         <viewControllerLayoutGuide type="bottom" id="2RU-bq-83b"/>
@@ -834,7 +837,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter friend's e-mail address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugj-J8-QSK">
                                         <rect key="frame" x="28" y="9" width="319" height="37"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="go"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">

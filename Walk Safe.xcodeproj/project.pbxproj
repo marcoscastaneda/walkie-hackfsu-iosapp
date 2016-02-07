@@ -19,7 +19,8 @@
 		BD18FB981C668CA0004AFA47 /* tab_inactive_settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB941C668CA0004AFA47 /* tab_inactive_settings@2x.png */; };
 		BD18FB9B1C66905C004AFA47 /* SinkinSans-400Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB991C66905C004AFA47 /* SinkinSans-400Regular.otf */; };
 		BD18FB9C1C66905C004AFA47 /* SinkinSans-500Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BD18FB9A1C66905C004AFA47 /* SinkinSans-500Medium.otf */; };
-		BD42D9B51C672CE20014F93E /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD42D9B41C672CE20014F93E /* Parse.framework */; };
+		BD334C891C6743A000C11C96 /* LoginTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD334C881C6743A000C11C96 /* LoginTableController.swift */; };
+		BD334C8B1C6743D700C11C96 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD334C8A1C6743D700C11C96 /* Parse.framework */; };
 		BD42D9BA1C6734D10014F93E /* marker_person.png in Resources */ = {isa = PBXBuildFile; fileRef = BD42D9B81C6734D10014F93E /* marker_person.png */; };
 		BD42D9BB1C6734D10014F93E /* marker_person@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD42D9B91C6734D10014F93E /* marker_person@2x.png */; };
 		BD42D9BF1C673B020014F93E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BD42D9BD1C673B020014F93E /* MBProgressHUD.m */; };
@@ -48,7 +49,6 @@
 		BD97B6E71C66CC5000F6C675 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD97B6E61C66CC5000F6C675 /* CoreGraphics.framework */; };
 		BD97B6E91C66CC5B00F6C675 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD97B6E81C66CC5B00F6C675 /* CoreLocation.framework */; };
 		BD97B6EB1C66CC6200F6C675 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD97B6EA1C66CC6200F6C675 /* QuartzCore.framework */; };
-		BD97B6ED1C66CC7100F6C675 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD97B6EC1C66CC7100F6C675 /* StoreKit.framework */; };
 		BD97B6EF1C66CC7B00F6C675 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BD97B6EE1C66CC7B00F6C675 /* libz.tbd */; };
 		BD97B6F11C66CC8100F6C675 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BD97B6F01C66CC8100F6C675 /* libsqlite3.tbd */; };
 		BD9A7D911C66679300B9CBDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7D901C66679300B9CBDF /* AppDelegate.swift */; };
@@ -58,7 +58,6 @@
 		BD9A7DA61C66679300B9CBDF /* Walk_SafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DA51C66679300B9CBDF /* Walk_SafeTests.swift */; };
 		BD9A7DB11C66679300B9CBDF /* Walk_SafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DB01C66679300B9CBDF /* Walk_SafeUITests.swift */; };
 		BD9A7DC21C666B9B00B9CBDF /* image_hero_walking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BD9A7DC11C666B9B00B9CBDF /* image_hero_walking.jpg */; };
-		BD9A7DC61C667C5300B9CBDF /* LogInTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DC51C667C5300B9CBDF /* LogInTableController.swift */; };
 		BD9A7DC81C667F3800B9CBDF /* SignUpTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DC71C667F3800B9CBDF /* SignUpTableController.swift */; };
 		BD9A7DCA1C66802600B9CBDF /* SignUpFinishTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DC91C66802600B9CBDF /* SignUpFinishTableController.swift */; };
 		BD9A7DCE1C66804600B9CBDF /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9A7DCD1C66804600B9CBDF /* RootViewController.swift */; };
@@ -94,7 +93,8 @@
 		BD18FB941C668CA0004AFA47 /* tab_inactive_settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_inactive_settings@2x.png"; sourceTree = "<group>"; };
 		BD18FB991C66905C004AFA47 /* SinkinSans-400Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SinkinSans-400Regular.otf"; sourceTree = "<group>"; };
 		BD18FB9A1C66905C004AFA47 /* SinkinSans-500Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SinkinSans-500Medium.otf"; sourceTree = "<group>"; };
-		BD42D9B41C672CE20014F93E /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		BD334C881C6743A000C11C96 /* LoginTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableController.swift; sourceTree = "<group>"; };
+		BD334C8A1C6743D700C11C96 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		BD42D9B81C6734D10014F93E /* marker_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker_person.png; sourceTree = "<group>"; };
 		BD42D9B91C6734D10014F93E /* marker_person@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "marker_person@2x.png"; sourceTree = "<group>"; };
 		BD42D9BC1C673B020014F93E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -128,10 +128,9 @@
 		BD97B6E61C66CC5000F6C675 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		BD97B6E81C66CC5B00F6C675 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BD97B6EA1C66CC6200F6C675 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		BD97B6EC1C66CC7100F6C675 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BD97B6EE1C66CC7B00F6C675 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		BD97B6F01C66CC8100F6C675 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		BD9A7D8D1C66679300B9CBDF /* walkie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = walkie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD9A7D8D1C66679300B9CBDF /* Walkie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walkie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9A7D901C66679300B9CBDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9A7D951C66679300B9CBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD9A7D971C66679300B9CBDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,7 +143,6 @@
 		BD9A7DB01C66679300B9CBDF /* Walk_SafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walk_SafeUITests.swift; sourceTree = "<group>"; };
 		BD9A7DB21C66679300B9CBDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD9A7DC11C666B9B00B9CBDF /* image_hero_walking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_hero_walking.jpg; sourceTree = "<group>"; };
-		BD9A7DC51C667C5300B9CBDF /* LogInTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInTableController.swift; path = ../LogInTableController.swift; sourceTree = "<group>"; };
 		BD9A7DC71C667F3800B9CBDF /* SignUpTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableController.swift; sourceTree = "<group>"; };
 		BD9A7DC91C66802600B9CBDF /* SignUpFinishTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpFinishTableController.swift; sourceTree = "<group>"; };
 		BD9A7DCD1C66804600B9CBDF /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -158,10 +156,9 @@
 				BD97B6F11C66CC8100F6C675 /* libsqlite3.tbd in Frameworks */,
 				BD97B6EF1C66CC7B00F6C675 /* libz.tbd in Frameworks */,
 				BD8789561C66F0CA002C0690 /* MapKit.framework in Frameworks */,
-				BD97B6ED1C66CC7100F6C675 /* StoreKit.framework in Frameworks */,
 				BD4967BA1C66ACC7008B6D1C /* Security.framework in Frameworks */,
 				BD97B6EB1C66CC6200F6C675 /* QuartzCore.framework in Frameworks */,
-				BD42D9B51C672CE20014F93E /* Parse.framework in Frameworks */,
+				BD334C8B1C6743D700C11C96 /* Parse.framework in Frameworks */,
 				BD97B6E91C66CC5B00F6C675 /* CoreLocation.framework in Frameworks */,
 				BD97B6E71C66CC5000F6C675 /* CoreGraphics.framework in Frameworks */,
 				BD97B6E51C66CC4300F6C675 /* AudioToolbox.framework in Frameworks */,
@@ -239,6 +236,13 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		BD334C8E1C6748DC00C11C96 /* MP3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MP3;
+			sourceTree = "<group>";
+		};
 		BD42D9BE1C673B020014F93E /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,12 +313,11 @@
 		BD97B6E31C66CC2C00F6C675 /* Parse+Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				BD42D9B41C672CE20014F93E /* Parse.framework */,
+				BD334C8A1C6743D700C11C96 /* Parse.framework */,
 				BD8789551C66F0CA002C0690 /* MapKit.framework */,
 				BD03A5A51C66CF21001D1A82 /* Bolts.framework */,
 				BD97B6F01C66CC8100F6C675 /* libsqlite3.tbd */,
 				BD97B6EE1C66CC7B00F6C675 /* libz.tbd */,
-				BD97B6EC1C66CC7100F6C675 /* StoreKit.framework */,
 				BD97B6EA1C66CC6200F6C675 /* QuartzCore.framework */,
 				BD97B6E81C66CC5B00F6C675 /* CoreLocation.framework */,
 				BD97B6E61C66CC5000F6C675 /* CoreGraphics.framework */,
@@ -336,7 +339,7 @@
 		BD9A7D8E1C66679300B9CBDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD9A7D8D1C66679300B9CBDF /* walkie.app */,
+				BD9A7D8D1C66679300B9CBDF /* Walkie.app */,
 				BD9A7DA11C66679300B9CBDF /* Walk SafeTests.xctest */,
 				BD9A7DAC1C66679300B9CBDF /* Walk SafeUITests.xctest */,
 			);
@@ -378,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				BD18FB9D1C66905F004AFA47 /* Fonts */,
+				BD334C8E1C6748DC00C11C96 /* MP3 */,
 				BD18FB8C1C668A1E004AFA47 /* UI Icons */,
 				BD9A7D971C66679300B9CBDF /* Assets.xcassets */,
 				BD9A7D991C66679300B9CBDF /* LaunchScreen.storyboard */,
@@ -391,7 +395,7 @@
 		BD9A7DCB1C66802900B9CBDF /* Pre-Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				BD9A7DC51C667C5300B9CBDF /* LogInTableController.swift */,
+				BD334C881C6743A000C11C96 /* LoginTableController.swift */,
 				BD9A7DC71C667F3800B9CBDF /* SignUpTableController.swift */,
 				BD9A7DC91C66802600B9CBDF /* SignUpFinishTableController.swift */,
 			);
@@ -425,7 +429,7 @@
 			);
 			name = "Walk Safe";
 			productName = "Walk Safe";
-			productReference = BD9A7D8D1C66679300B9CBDF /* walkie.app */;
+			productReference = BD9A7D8D1C66679300B9CBDF /* Walkie.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BD9A7DA01C66679300B9CBDF /* Walk SafeTests */ = {
@@ -478,6 +482,12 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = Y5Q9CABWG8;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
@@ -576,8 +586,8 @@
 				BD97B6D71C66AE6300F6C675 /* JDStatusBarView.m in Sources */,
 				BD97B6D61C66AE6300F6C675 /* JDStatusBarStyle.m in Sources */,
 				BD42D9BF1C673B020014F93E /* MBProgressHUD.m in Sources */,
+				BD334C891C6743A000C11C96 /* LoginTableController.swift in Sources */,
 				BD9A7D911C66679300B9CBDF /* AppDelegate.swift in Sources */,
-				BD9A7DC61C667C5300B9CBDF /* LogInTableController.swift in Sources */,
 				BD97B6DB1C66C21600F6C675 /* TheUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -735,12 +745,14 @@
 					Safe,
 					"$(PROJECT_DIR)/Walk",
 					Safe,
+					"$(PROJECT_DIR)/Walk",
+					Safe,
 				);
 				INFOPLIST_FILE = "Walk Safe/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mcastaneda.Walk-Safe";
-				PRODUCT_NAME = walkie;
+				PRODUCT_NAME = Walkie;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Walk Safe/Walk Safe-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -768,12 +780,14 @@
 					Safe,
 					"$(PROJECT_DIR)/Walk",
 					Safe,
+					"$(PROJECT_DIR)/Walk",
+					Safe,
 				);
 				INFOPLIST_FILE = "Walk Safe/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mcastaneda.Walk-Safe";
-				PRODUCT_NAME = walkie;
+				PRODUCT_NAME = Walkie;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Walk Safe/Walk Safe-Bridging-Header.h";
 			};

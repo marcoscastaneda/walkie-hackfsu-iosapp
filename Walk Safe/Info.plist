@@ -48,6 +48,10 @@
 		<string>SinkinSans-400Regular.otf</string>
 		<string>SinkinSans-500Medium.otf</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>Main</string>
 	<key>UIMainStoryboardFile</key>

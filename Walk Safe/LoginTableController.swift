@@ -12,14 +12,14 @@ import Parse
 class LogInTableController: UITableViewController {
     
     // Firebase ref
-//    let ref = Firebase(url: "https://walkieapp.firebaseio.com")
-
+    //    let ref = Firebase(url: "https://walkieapp.firebaseio.com")
+    
     @IBOutlet weak var textFieldEmailAddress: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.navigationItem.title = "Log In"
         
         // Remove seperators for empty cells
@@ -55,17 +55,17 @@ class LogInTableController: UITableViewController {
         }
         /* Firebase login
         ref.authUser(self.textFieldEmailAddress.text, password: self.textFieldPassword.text,
-            withCompletionBlock: { error, authData in
-                if error != nil {
-                    // There was an error logging in to this account
-                    
-                    JDStatusBarNotification.showWithStatus(error.localizedDescription, dismissAfter: NSTimeInterval.abs(3), styleName: JDStatusBarStyleError)
-                    
-                } else {
-                    // Login success
-                    self.navigationController!.presentViewController(self.storyboard!.instantiateViewControllerWithIdentifier("LoggedInRoot") as! UITabBarController, animated: true, completion: nil)
-                    
-                }
+        withCompletionBlock: { error, authData in
+        if error != nil {
+        // There was an error logging in to this account
+        
+        JDStatusBarNotification.showWithStatus(error.localizedDescription, dismissAfter: NSTimeInterval.abs(3), styleName: JDStatusBarStyleError)
+        
+        } else {
+        // Login success
+        self.navigationController!.presentViewController(self.storyboard!.instantiateViewControllerWithIdentifier("LoggedInRoot") as! UITabBarController, animated: true, completion: nil)
+        
+        }
         }) */
         
     }
