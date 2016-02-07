@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Parse
 
 class LogInTableController: UITableViewController {
+    
+    // Firebase ref
+//    let ref = Firebase(url: "https://walkieapp.firebaseio.com")
 
     @IBOutlet weak var textFieldEmailAddress: UITextField!
     @IBOutlet weak var textFieldPassword: UITextField!
@@ -31,7 +35,35 @@ class LogInTableController: UITableViewController {
     
     
     @IBAction func logInTouched(sender: AnyObject) {
-        self.navigationController!.presentViewController(self.storyboard!.instantiateViewControllerWithIdentifier("LoggedInRoot") as! UITabBarController, animated: true, completion: nil)
+    
+        
+        PFUser.logInWithUsernameInBackground(self.textFieldEmailAddress.text!, password: self.textFieldPassword.text!) { (user: PFUser?, error: NSError?) -> Void in
+            
+            if (error != nil)
+            {
+                JDStatusBarNotification.showWithStatus(error!.localizedDescription, dismissAfter: NSTimeInterval.abs(3), styleName: JDStatusBarStyleError)
+            }
+            else
+            {
+
+                self.navigationController!.presentViewController(self.storyboard!.instantiateViewControllerWithIdentifier("LoggedInRoot") as! UITabBarController, animated: true, completion: nil)
+            }
+        }
+        /* Firebase login
+        ref.authUser(self.textFieldEmailAddress.text, password: self.textFieldPassword.text,
+            withCompletionBlock: { error, authData in
+                if error != nil {
+                    // There was an error logging in to this account
+                    
+                    JDStatusBarNotification.showWithStatus(error.localizedDescription, dismissAfter: NSTimeInterval.abs(3), styleName: JDStatusBarStyleError)
+                    
+                } else {
+                    // Login success
+                    self.navigationController!.presentViewController(self.storyboard!.instantiateViewControllerWithIdentifier("LoggedInRoot") as! UITabBarController, animated: true, completion: nil)
+                    
+                }
+        }) */
+        
     }
     
     @IBAction func closeAction(sender: AnyObject) {

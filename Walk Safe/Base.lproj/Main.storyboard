@@ -13,7 +13,7 @@
         <!--Root View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RootViewController" customModule="Walk_Safe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Root" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="RootViewController" customModule="Walk_Safe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -202,7 +202,7 @@
                                                     <rect key="frame" x="13" y="15" width="349" height="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="alphabet" keyboardAppearance="alert"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                             <color key="value" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -229,13 +229,14 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="5El-cs-hgu">
                             <connections>
-                                <segue destination="RWl-Ig-32z" kind="show" identifier="SignUpNext" id="kqk-T8-Jeg"/>
+                                <action selector="nextAction:" destination="671-TE-Lme" id="Dqe-eb-Inn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="textFieldUserFullName" destination="bGK-7v-SDH" id="ai1-mD-UOC"/>
+                        <segue destination="RWl-Ig-32z" kind="show" identifier="SignUpNext" id="vba-U9-O6q"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RVI-Zq-pBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -385,6 +386,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="labelHelloName" destination="pdU-fc-zf1" id="8E1-dJ-FES"/>
+                        <outlet property="textFieldEmailAddress" destination="pv5-xs-r5y" id="IlO-PT-6cZ"/>
+                        <outlet property="textFieldPassword1" destination="Syx-Vy-oNi" id="ctl-1q-KKV"/>
+                        <outlet property="textFieldPassword2" destination="diK-oP-kax" id="Jpa-Tf-65x"/>
+                        <outlet property="textFieldPhoneNumber" destination="fRS-ip-hOh" id="oUZ-v7-bpP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSi-gh-OYA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -524,20 +529,60 @@
                         <sections>
                             <tableViewSection id="Ajv-6U-R3Y">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="hjQ-3M-oHb">
-                                        <rect key="frame" x="0.0" y="64" width="375" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="200" id="hjQ-3M-oHb">
+                                        <rect key="frame" x="0.0" y="64" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hjQ-3M-oHb" id="f3Q-NY-q7R">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Doe" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BS8-eq-ca7">
-                                                    <rect key="frame" x="13" y="39" width="150" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Doe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BS8-eq-ca7">
+                                                    <rect key="frame" x="8" y="129" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder_user.png" translatesAutoresizingMaskIntoConstraints="NO" id="eHD-ek-Yoa">
+                                                    <rect key="frame" x="142" y="21" width="90" height="90"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="45"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username@me.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdj-jl-Ilw">
+                                                    <rect key="frame" x="8" y="153" width="359" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="pZF-hw-BR2">
+                                        <rect key="frame" x="0.0" y="264" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pZF-hw-BR2" id="d4s-fd-Ffj">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Walking Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfo-Gv-Px2">
+                                                    <rect key="frame" x="13" y="19" width="213" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="pgS-YU-1Cw">
+                                        <rect key="frame" x="0.0" y="324" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pgS-YU-1Cw" id="DtE-mb-cqZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
@@ -549,7 +594,18 @@
                             <outlet property="delegate" destination="KZ5-Cf-fx8" id="p06-6h-dlR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="EN7-2f-ppX"/>
+                    <navigationItem key="navigationItem" id="EN7-2f-ppX">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="IsU-Sz-V1u">
+                            <connections>
+                                <action selector="logOutAction:" destination="KZ5-Cf-fx8" id="dMQ-j1-Oee"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageViewUserProfile" destination="eHD-ek-Yoa" id="9G3-dt-sfo"/>
+                        <outlet property="labelUserEmail" destination="tdj-jl-Ilw" id="415-GH-lrh"/>
+                        <outlet property="labelUserFullName" destination="BS8-eq-ca7" id="kVu-kP-bL1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grc-2O-B24" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -598,6 +654,7 @@
     </scenes>
     <resources>
         <image name="image_hero_walking2.jpg" width="983" height="1300"/>
+        <image name="placeholder_user.png" width="300" height="300"/>
         <image name="tab_active_settings.png" width="28" height="28"/>
         <image name="tab_active_walking.png" width="28" height="28"/>
         <image name="tab_inactive_settings.png" width="28" height="28"/>

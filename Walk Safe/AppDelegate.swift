@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import Bolts
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -38,6 +40,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
+        // Init Parse
+        Parse.enableLocalDatastore()
+        
+        // Initialize Parse.
+        Parse.setApplicationId("F16QepnOhFE2chDvNP1wRyO0SypUpupj9vShrbsC",
+            clientKey: "4rlOSlSEMHju40dNLLWlZVYINpg3FOIQEZRb1kz7")
+        
+        // [Optional] Track statistics around application opens.
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         return true
     }
